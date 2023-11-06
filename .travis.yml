@@ -1,8 +1,8 @@
 jobs:
   include:
     - stage: test
-      script: ./test 1
+      script: test 1.txt
     - # stage name not required, will continue to use `test`
-      script: ./test 2
+      script: test 2.txt
     - stage: deploy
-      script: ./deploy
+      script: deploy.txt
