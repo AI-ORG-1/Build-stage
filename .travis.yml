@@ -10,6 +10,7 @@ jobs:
       - docker images
       - docker tag hello-world-python arthanaharidas/python-hello-world
       - docker push arthanaharidas/python-hello-world
+      - docker logout
     - stage: test
-      script: docker run --rm arthanaharidas/hello-world-python hello_world.py
-    - script: docker run --rm arthanaharidas/hello-world-python hello_world.py
+      script: docker run arthanaharidas/hello-world-python hello_world.py
+    - script: docker run arthanaharidas/hello-world-python hello_world.py
